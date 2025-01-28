@@ -1,7 +1,4 @@
 import React from "react";
-import aboutImg from "../assets/mobile-login.png";
-import Maecenas from '../assets/maecenas.png'
-
 // motion
 import { motion } from "framer-motion";
 // variants
@@ -14,19 +11,21 @@ const Product = () => {
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12">
         <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <motion.div
-          variants={fadeIn("right", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
           >
-            <img src={aboutImg} alt="" className="w-full" />
+            {/* Image path updated to use public folder */}
+            <img src="/assets/mobile-login.png" alt="" className="w-full" />
           </motion.div>
           <motion.div
-          variants={fadeIn("left", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className="md:w-3/5 mx-auto">
+            variants={fadeIn("left", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="md:w-3/5 mx-auto"
+          >
             <h2 className="text-4xl text-neutralDGrey font-semibold mb-4 md:w-4/5">
               How to design your site footer like we did
             </h2>
@@ -48,14 +47,16 @@ const Product = () => {
 
       {/* company stats */}
       <motion.div
-      variants={fadeIn("up", 0.3)}
-      initial="hidden"
-      whileInView={"show"}
-      viewport={{ once: false, amount: 0.6 }}
-      className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16">
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.6 }}
+        className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16"
+      >
         <div className="flex flex-col md:flex-row justify-start items-center gap-8">
           <div className="md:w-1/3">
-            <img src={Maecenas} alt="" />
+            {/* Image path updated to use public folder */}
+            <img src="/assets/maecenas.png" alt="" />
           </div>
 
           {/* stats */}
@@ -74,20 +75,50 @@ const Product = () => {
                 eget efficitur libero condimentum id. Curabitur id nibh id sem
                 dignissim finibus ac sit amet magna.
               </p>
-              <h5 className="text-brandPrimary text-xl font-semibold mb-2">Tim Smith</h5>
+              <h5 className="text-brandPrimary text-xl font-semibold mb-2">
+                Tim Smith
+              </h5>
               <p className="text-base text-neutralGrey mb-8">
                 British Dragon Boat Racing Association
               </p>
               <div>
                 <div className="flex gap-8 items-center flex-wrap">
-                  <img src="/src/assets/icons/company1.png" alt="" className="cursor-pointer" />
-                  <img src="/src/assets/icons/company2.png" alt=""  className="cursor-pointer"/>
-                  <img src="/src/assets/icons/company3.png" alt="" className="cursor-pointer" />
-                  <img src="/src/assets/icons/company4.png" alt="" className="cursor-pointer" />
-                  <img src="/src/assets/icons/company5.png" alt="" className="cursor-pointer" />
-                  <img src="/src/assets/icons/company6.png" alt="" className="cursor-pointer" />
+                  {/* Updated paths for company logos */}
+                  <img
+                    src="/assets/icons/company1.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/assets/icons/company2.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/assets/icons/company3.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/assets/icons/company4.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/assets/icons/company5.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/assets/icons/company6.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
                   <div className="flex gap-8 items-center">
-                    <a href="/" className="font-bold text-brandPrimary hover:text-neutralBlack">
+                    <a
+                      href="/"
+                      className="font-bold text-brandPrimary hover:text-neutralBlack"
+                    >
                       Meet all customers
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -3,29 +3,31 @@ import React from "react";
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants";
+import projectsData from './projectsData'
+
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      title: "Membership Organisations",
+      title: "Website Development",
       decription:
-        "Our membership management software provides full automation of membership renewals and payments",
-      image: "/src/assets/icons/membership.png",
+        "Building custom ecommerce and portfolio websites for all types of local businesses.",
+      image: "/assets/icons/membership.png",
     },
     {
       id: 2,
-      title: "National Associations",
+      title: "Digital Marketing",
       decription:
-        "Our membership management software provides full automation of membership renewals and payments",
-      image: "/src/assets/icons/association.png",
+        "Running paid campaigns and optimizing social media to drive leads and sales.",
+      image: "/assets/icons/association.png",
     },
     {
       id: 3,
-      title: "Clubs And Groups",
+      title: "Software Solutions",
       decription:
-        "Our membership management software provides full automation of membership renewals and payments",
-      image: "/src/assets/icons/group-club.png",
+        "Creating custom software solutions to streamline operations and boost efficiency.",
+      image: "/assets/icons/group-club.png",
     },
   ];
   return (
@@ -33,24 +35,36 @@ const Services = () => {
       <motion.div
         variants={fadeIn("up", 0.2)}
         initial="hidden"
-        whileInView={"show"}
+        whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
         className="text-center my-8"
       >
         <h2 className="text-4xl text-neutralDGrey font-semibold mb-2">
-          Our Clients
+          Our Projects
         </h2>
         <p className="text-neutralGrey">
-          We have been working with some Fortune 500+ clients
+          Showcasing the work we've done for clients across various industries.
         </p>
-        <div className="my-12 flex flex-wrap justify-between items-center gap-8 ">
-          <img src="src/assets/icons/company1.png" alt="" />
-          <img src="src/assets/icons/company2.png" alt="" />
-          <img src="src/assets/icons/company3.png" alt="" />
-          <img src="src/assets/icons/company4.png" alt="" />
-          <img src="src/assets/icons/company5.png" alt="" />
-          <img src="src/assets/icons/company6.png" alt="" />
-          <img src="src/assets/icons/company7.png" alt="" />
+        <div className="my-12 flex flex-wrap justify-between items-center gap-8">
+          {/* Add your project data */}
+          {projectsData.map((data) => (
+            <div
+              key={data.id}
+              className="img d-flex justify-content-center align-content-center p-3"
+            >
+              <img
+                src={data.imageSrc}
+                className="card-img-top"
+                alt={data.title}
+                style={{
+                  width: "250px",
+                  height: "200px",
+                  border: "2px solid yellow",
+                  borderRadius: "10px",
+                }}
+              />
+            </div>
+          ))}
         </div>
       </motion.div>
 
@@ -63,10 +77,11 @@ const Services = () => {
         className="mt-20 text-center md:w-1/2 mx-auto"
       >
         <h2 className="text-4xl text-neutralDGrey font-semibold mb-3">
-          Manage your entire community in a single system
+          Effortlessly Manage Your Entire Business Online
         </h2>
         <p className="text-neutralGrey">
-          We have been working with some Fortune 500+ clients
+          Helping businesses thrive by bringing them online and optimizing
+          operations
         </p>
       </motion.div>
 

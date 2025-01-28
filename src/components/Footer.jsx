@@ -1,15 +1,12 @@
 import React from "react";
-import { Footer, Label, TextInput } from "flowbite-react";
+import { Footer, TextInput } from "flowbite-react";
 import {
   BsFacebook,
   BsGithub,
   BsInstagram,
-  BsMailbox,
-  BsMailbox2,
   BsTwitter,
 } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
-import logo from "../assets/logo.png";
 
 const MyFooter = () => {
   return (
@@ -18,18 +15,18 @@ const MyFooter = () => {
         <div className="grid w-full justify-between gap-8 sm:flex sm:items-start sm:justify-between md:flex md:grid-cols-1">
           <div className="mt-2">
             <a
-              href=""
+              href="#"
               className="text-2xl font-semibold flex items-center space-x-3"
             >
               <img
-                src={logo}
-                alt=""
+                src="/assets/logo.png"  
+                alt="NEXCENT logo"
                 className="w-10 inline-block items-center"
               />
               <span>NEXCENT</span>
             </a>
             <div className="my-8">
-              <p className="mb-1"> Copyright © 2020 Nexcent ltd.</p>
+              <p className="mb-1">Copyright © 2020 Nexcent ltd.</p>
               <p>All rights reserved</p>
             </div>
 
