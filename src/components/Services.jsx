@@ -32,42 +32,7 @@ const Services = () => {
   ];
   return (
     <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="service">
-      <motion.div
-        variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.7 }}
-        className="text-center my-8"
-      >
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-2">
-          Our Projects
-        </h2>
-        <p className="text-neutralGrey">
-          Showcasing the work we've done for clients across various industries.
-        </p>
-        <div className="my-12 flex flex-wrap justify-between items-center gap-8">
-          {/* Add your project data */}
-          {projectsData.map((data) => (
-            <div
-              key={data.id}
-              className="img d-flex justify-content-center align-content-center p-3"
-            >
-              <img
-                src={data.imageSrc}
-                className="card-img-top"
-                alt={data.title}
-                style={{
-                  width: "250px",
-                  height: "200px",
-                  border: "2px solid yellow",
-                  borderRadius: "10px",
-                }}
-              />
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
+    
       {/* service cards */}
       <motion.div
         variants={fadeIn("left", 0.2)}
@@ -76,7 +41,7 @@ const Services = () => {
         viewport={{ once: false, amount: 0.7 }}
         className="mt-20 text-center md:w-1/2 mx-auto"
       >
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-3">
+        <h2 className="text-4xl text-neutralDGrey font-semibold mb-1">
           Effortlessly Manage Your Entire Business Online
         </h2>
         <p className="text-neutralGrey">

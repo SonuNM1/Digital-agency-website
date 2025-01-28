@@ -1,94 +1,101 @@
 import React from "react";
 import { Footer, TextInput } from "flowbite-react";
-import {
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsTwitter,
-} from "react-icons/bs";
+import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
 
 const MyFooter = () => {
   return (
-    <footer className="bg-neutralBlack text-white">
-      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto py-12">
-        <div className="grid w-full justify-between gap-8 sm:flex sm:items-start sm:justify-between md:flex md:grid-cols-1">
-          <div className="mt-2">
-            <a
-              href="#"
-              className="text-2xl font-semibold flex items-center space-x-3"
-            >
-              <img
-                src="/assets/logo.png"  
-                alt="NEXCENT logo"
-                className="w-10 inline-block items-center"
-              />
-              <span>NEXCENT</span>
+    <footer className="bg-neutral-900 text-white py-8">
+      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
+          {/* Left Section */}
+          <div>
+            <a href="#" className="text-3xl font-bold text-green-500">
+              DOT.CONNECT
             </a>
-            <div className="my-8">
-              <p className="mb-1">Copyright © 2020 Nexcent ltd.</p>
-              <p>All rights reserved</p>
-            </div>
-
-            <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-start text-white">
-              <Footer.Icon href="#" icon={BsFacebook} className="text-white" />
-              <Footer.Icon href="#" icon={BsInstagram} className="text-white" />
-              <Footer.Icon href="#" icon={BsTwitter} className="text-white" />
-              <Footer.Icon href="#" icon={BsGithub} className="text-white" />
+            <p className="mt-4 text-sm text-neutral-400">
+              Copyright © 2024 DotConnect ltd. All rights reserved.
+            </p>
+            <div className="mt-4 flex space-x-6 text-neutral-400">
+              <a
+                href="https://www.facebook.com/sonu36200/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                <BsFacebook size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/the_sonu.nm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                <BsInstagram size={20} />
+              </a>
+              <a
+                href="https://github.com/SonuNM1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                <BsGithub size={20} />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                <BsTwitter size={20} />
+              </a>
             </div>
           </div>
-          <div className="md:w-2/3 grid grid-cols-2 gap-8 items-start sm:mt-4 sm:grid-cols-3 sm:gap-6 text-white">
+
+          {/* Right Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Company Links */}
             <div>
-              <Footer.Title title="Company" className="text-white" />
-              <Footer.LinkGroup col>
-                <Footer.Link href="#" className="text-white">
+              <h3 className="text-lg font-semibold text-white">Company</h3>
+              <div className="mt-4 text-sm text-neutral-400">
+                <a href="#about" className="block hover:text-white mb-2">
                   About us
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Blog
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
+                </a>
+                <a href="#" className="block hover:text-white mb-2">
                   Contact us
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Pricing
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
+                </a>
+                <a href="#testimonial" className="block hover:text-white">
                   Testimonials
-                </Footer.Link>
-              </Footer.LinkGroup>
+                </a>
+              </div>
             </div>
+
+            {/* Stay Updated */}
+
             <div>
-              <Footer.Title title="Support" className="text-white" />
-              <Footer.LinkGroup col>
-                <Footer.Link href="#" className="text-white">
-                  Help center
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Terms of service
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Legal
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Privacy policy
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Status
-                </Footer.Link>
-              </Footer.LinkGroup>
-            </div>
-            <div>
-              <Footer.Title title="Stay up to date" className="text-white" />
-              <div className="max-w-md text-white">
-                <div className="mb-2 block"></div>
+              <h3 className="text-lg font-semibold text-white">
+                Reach Out To Us
+              </h3>
+              <p className="mt-4 text-sm text-neutral-400">
+              If you have any questions, feel free to mail us directly.
+              </p>
+              <div className="mt-4 flex items-center">
                 <TextInput
-                  id="email4"
-                  placeholder="name@flowbite.com"
+                  id="email"
+                  placeholder="Your email address"
                   required
-                  rightIcon={SiMinutemailer}
                   type="email"
+                  className="bg-neutral-800 text-white border-neutral-600 focus:ring-green-500"
                 />
+                {/* Separately rendered mailto link icon */}
+                <a
+                  href="mailto:isonumahto362000@gmail.com?subject=Newsletter Subscription"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-3 text-white"
+                >
+                  <SiMinutemailer size={20} />
+                </a>
               </div>
             </div>
           </div>

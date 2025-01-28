@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 // import icons from react icons
 import { GrLanguage } from "react-icons/gr";
 import { FaXmark, FaBars } from "react-icons/fa6";
+import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,9 +35,8 @@ const Navbar = () => {
     { link: "Home", path: "home" },
     { link: "Services", path: "service" },
     { link: "About", path: "about" },
-    { link: "Projects", path: "product" },
+    { link: "Projects", path: "projects" },
     { link: "Testimonial", path: "testimonial" },
-    { link: "FAQ", path: "faq" },
   ];
 
   return (
@@ -54,12 +54,7 @@ const Navbar = () => {
             href=""
             className="text-2xl font-semibold flex items-center space-x-3"
           >
-            <img
-              src="/assets/logo.png" // Use absolute path from the public folder
-              alt=""
-              className="w-10 inline-block items-center"
-            />
-            <span>NEXCENT</span>
+            <span className="text-green-500 font-bold">DOT.CONNECT</span>
           </a>
 
           <ul className="md:flex space-x-12 hidden">
@@ -79,9 +74,11 @@ const Navbar = () => {
           </ul>
 
           <div className="space-x-12 hidden lg:flex items-center">
-            <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">
-              Get a Free Quote
-            </button>
+            <RouterLink to='/quote'>
+              <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">
+                Get a Free Quote
+              </button>
+            </RouterLink>
           </div>
 
           {/* menu btn, visible on mobile screen */}
